@@ -1,0 +1,30 @@
+ #include<stdio.h>
+int main(){
+
+int length=1,n,i,j,max=1,a,t;
+scanf("%d",&t);
+while(t--){
+
+scanf("%d %d",&i,&j);
+for(a=i;a<=j;a++){
+length=1;
+n=a;
+while (n>1) {
+          if (n%2==0)
+          {
+             n=n/2;
+             length++;
+          }
+          else
+          {
+             n=n*3+1;
+             length++;
+          }
+ }
+if(max<length)
+max=length;
+}
+printf("%d %d %d\n",i,j,max);
+max=0;
+}
+}
